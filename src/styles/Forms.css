@@ -1,0 +1,18 @@
+.search-form {
+  margin: 10px;
+}
+
+.text-field {
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.button-1 {
+  background: green;
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  padding: 5px 10px;
+}

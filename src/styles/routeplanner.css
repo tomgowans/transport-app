@@ -1,0 +1,240 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.main-leg {
+  border-left: 5px solid blue;
+  list-style: none;
+  margin-left: 15px;
+  padding-left: 20px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.main-leg:first-of-type {
+  margin-top: 20px;
+}
+
+.main-leg ul {
+  list-style: none;
+  padding-top: 5px;
+}
+
+.main-leg:before {
+  background: #fff;
+  border: 4px solid #000;
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  display: block;
+  position: absolute;
+  left: -15px;
+  top: 0;
+}
+
+.show-hide-legs-button {
+  border: 0;
+  background: none;
+  padding: 0;
+}
+
+.leg-steps {
+  font-size: 0.9em;
+  line-height: 1.7;
+  position: relative;
+}
+
+.leg-steps:before {
+  content: '';
+  display: block;
+  height: 4px;
+  left: -20px;
+  position: absolute;
+  top: calc(50% - 2px );
+  width: 5px;
+}
+
+.main-leg-walking {
+  border-color: black;
+  border-left-style: dotted;
+}
+
+
+.main-leg-bus {
+  border-color: red;
+}
+
+.main-leg-bus .leg-steps:before {
+  background: red;
+}
+
+.main-leg-national-rail {
+  border-color: green;
+}
+
+.main-leg-national-rail .leg-steps:before {
+  background: green;
+}
+
+.main-leg-bakerloo {
+  border-color: #894e24;
+}
+
+.main-leg-bakerloo .leg-steps:before {
+  background: #894e24;
+}
+
+.main-leg-district {
+  border-color:#007229;
+}
+
+.main-leg-district .leg-steps:before {
+  background:#007229;
+}
+
+.main-leg-central {
+  border-color: #dc241f;
+}
+
+.main-leg-central .leg-steps:before {
+  background: #dc241f;
+}
+
+.main-leg-circle {
+  border-color: #ffce00;
+}
+
+.main-leg-circle .leg-steps:before {
+  background: #ffce00;
+}
+
+.main-leg-hammersmith-city {
+  border-color: #d799af;
+}
+
+.main-leg-hammersmith-city .leg-steps:before {
+  background: #d799af;
+}
+
+.main-leg-jubilee {
+  border-color: #6a7278;
+}
+
+.main-leg-jubilee .leg-steps:before {
+  background: #6a7278;
+}
+
+.main-leg-metropolitan {
+  border-color: #751056;
+}
+
+.main-leg-metropolitan .leg-steps:before {
+  background: #751056;
+}
+
+.main-leg-northern {
+  border-color: #000;
+}
+
+.main-leg-northern .leg-steps:before {
+  background: #000;
+}
+
+.main-leg-piccadilly {
+  border-color: #0019a8;
+}
+
+.main-leg-piccadilly .leg-steps:before {
+  background: #0019a8;
+}
+
+.main-leg-victoria {
+  border-color: #00a0e2;
+}
+
+.main-leg-victoria .leg-steps:before {
+  background: #00a0e2;
+}
+
+.main-leg-waterloo-city {
+  border-color: #76d0bd;
+}
+
+.main-leg-waterloo-city .leg-steps:before {
+  background: #76d0bd;
+}
+
+.main-leg-london-overground {
+  border-color: #e86a10;
+}
+
+.main-leg-london-overground .leg-steps:before {
+  background: #e86a10;
+}
+
+.main-leg-tfl-rail {
+  border-color: #0019a8;
+}
+
+.main-leg-tfl-rail .leg-steps:before {
+  background: #0019a8;
+}
+
+.main-leg-dlr {
+  border-color: #00afad;
+}
+
+.main-leg-dlr .leg-steps:before {
+  background: #00afad;
+}
+
+.main-leg-tram {
+  border-color: #6c0;
+}
+
+.main-leg-tram .leg-steps:before {
+  background: #6c0;
+}
+
+
+
+.route-summary {
+  background: #f1f6fd;
+  border-top: 2px solid white;
+  display: block;
+  padding: 10px;
+}
+
+.route-summary-duration {
+  display: inline-block;
+  font-size: 1.4em;
+  font-weight: bold;
+  width: 22%;
+}
+
+.route-summary-duration small {
+  font-size: .6em;
+  font-weight: normal;
+}
+
+.route-summary-minilegs {
+  font-size: 1.2em;
+}
+
+.route-leg-summary {
+  align-items: center;
+  display: flex;
+  font-size: .9em;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.route-leg-summary-time {
+  margin-left: 5px;
+}
+
+.route-leg-summary-label {
+  line-height: 1.5;
+}

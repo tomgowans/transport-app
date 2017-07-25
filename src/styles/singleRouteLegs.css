@@ -1,0 +1,35 @@
+.summary-open .route-summary:before {
+  background: rgba(0,0,0,.2);
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.single-route-legs {
+  background: #fff;
+  bottom: 0;
+  box-shadow: 0 0 15px 0 #000;
+  height: 95vh;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  z-index: 2;
+}
+
+
+.route-legs {
+  max-height: 0;
+  opacity: 0;
+  overflow: auto;
+  transition: opacity .25s, .25s max-height .25s;
+}
+
+.show-legs {
+  max-height: 100vh;
+  opacity: 1;
+  transition: .3s opacity .5s, max-height .5s;
+}
