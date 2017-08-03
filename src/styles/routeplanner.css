@@ -1,8 +1,3 @@
-ul {
-  margin: 0;
-  padding: 0;
-}
-
 .main-leg {
   border-left: 5px solid blue;
   list-style: none;
@@ -17,7 +12,6 @@ ul {
 }
 
 .main-leg ul {
-  list-style: none;
   padding-top: 5px;
 }
 
@@ -198,7 +192,9 @@ ul {
   background: #6c0;
 }
 
-
+.routeplanner ul {
+  list-style: none;
+}
 
 .route-summary {
   background: #f1f6fd;

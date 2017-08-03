@@ -30,10 +30,10 @@ class StopPoint extends Component {
     console.log("Add to favourites button clicked", stopId);
   }
 
+  // <button onClick={(e) => this.addToFavourites(this.props.match.params.stopPoint)}>Add to homepage</button>
   render() {
     return (
       <div className="stopPoint">
-        <button onClick={(e) => this.addToFavourites(this.props.match.params.stopPoint)}>Add to homepage</button>
 
         <CountDown stopPoint={this.props.match.params.stopPoint} />
       </div>

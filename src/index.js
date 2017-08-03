@@ -16,7 +16,7 @@ import './index.css';
 
 const router = (
   <Router>
-    <div>
+    <div className="app-wrapper">
       <Route exact path="/" component={Homepage} />
       <Route path="/stop/:stopPoint" component={StopPoint} />
       <Route path="/search/:terms" component={Search} />
@@ -24,7 +24,10 @@ const router = (
 
       <Route path="/route/:from/:to" component={RouteOptions} />
 
-
+      <footer className="app-footer">
+        <p>Built by <a href="//www.tomgowans.com">Tom Gowans</a></p>
+        <p>Data provided by <a href="https://www.tfl.gov.uk">TfL</a></p>
+      </footer>
     </div>
   </Router>
 )
