@@ -24,21 +24,24 @@ class RouteForm extends Component {
       <form id="routeplannerForm" className="search-form routeplanner-form" onSubmit={(e) => this.formSubmit(e) }>
         <h2>Routeplanner</h2>
 
-        <AutocompleteField
-          placeholder={ fromPlaceholder }
-          inputName="from"
-          inputClassnames="routeplanner-from text-field"
-          inputRef={ (input) => { this.fromInput = input; } } />
+        <div className="routeplanner-form-group">
+          <AutocompleteField
+            placeholder={ fromPlaceholder }
+            inputName="from"
+            inputClassnames="routeplanner-from text-field"
+            inputRef={ (input) => { this.fromInput = input; } } />
 
-        <span className="routeplanner-arrow">➡</span>
+          <span className="routeplanner-arrow">➡</span>
 
-        <AutocompleteField
-          placeholder={ toPlaceholder }
-          inputName="to"
-          inputClassnames="routeplanner-from text-field"
-          inputRef={ (input) => { this.toInput = input; } } />
+          <AutocompleteField
+            placeholder={ toPlaceholder }
+            inputName="to"
+            inputClassnames="routeplanner-from text-field"
+            inputRef={ (input) => { this.toInput = input; } } />
 
-        <input type="submit" value="Let's go!" className="button-1" />
+          <input type="submit" value="Let's go!" className="button-1" />
+        </div>
+
       </form>
     )
   }
