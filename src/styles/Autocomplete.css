@@ -1,0 +1,35 @@
+.autocomplete-wrapper {
+  display: inline-block;
+}
+
+.overlay {
+  background: #fff;
+  bottom: 0;
+  left: 0;
+  padding: 5%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.overlay .closebutton {
+  background: transparent;
+  border: 0;
+  font-size: 1.4em;
+  padding: 0;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.autocomplete-list {
+  font-size: .9em;
+  margin: 10px 0 20px;
+}
+
+.autocomplete-list li {
+  background: #f2f2f2;
+  margin-bottom: 1px;
+  padding: 5px 10px;
+}
