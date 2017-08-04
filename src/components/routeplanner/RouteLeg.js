@@ -13,11 +13,7 @@ class RouteLeg extends Component {
   }
 
   toggleSteps(event) {
-    let legsStatus = true;
-
-    if (this.state.openSteps) {
-      legsStatus = false;
-    }
+    let legsStatus = this.state.openSteps ? false : true;
 
     this.setState({
       openSteps: legsStatus
@@ -88,13 +84,8 @@ class RouteLeg extends Component {
       }
     }
 
-    let legStepsListShow = 'route-legs ',
-        toggleStepsLabel = '⬇ Show stops';
-
-    if (this.state.openSteps) {
-      legStepsListShow = 'route-legs show-legs';
-      toggleStepsLabel = '⬆ Hide stops';
-    }
+    let legStepsListShow = this.state.openSteps ? 'route-legs show-legs' : 'route-legs ',
+        toggleStepsLabel = this.state.openSteps ? '⬆ Hide stops' : '⬇ Show stops';
 
     return (
       <li className={legClassName}>

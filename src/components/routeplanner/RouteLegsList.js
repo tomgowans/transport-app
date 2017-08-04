@@ -7,13 +7,7 @@ class RouteLegsList extends Component {
     let legsObj = this.props.routeData.legs,
         routeLegs = '';
 
-    if (legsObj.length) {
-      routeLegs = legsObj.map((data, i) =>
-        <RouteLeg key={i} data={data}/>
-      );
-    } else {
-      routeLegs = <li>No route legs</li>;
-    }
+    routeLegs = legsObj.length ? routeLegs = legsObj.map((data, i) => <RouteLeg key={i} data={data}/> ) : <li>No route legs</li>;
 
     return (
       <ul className="single-route-legs">

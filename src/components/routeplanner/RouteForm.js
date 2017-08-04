@@ -17,29 +17,15 @@ class RouteForm extends Component {
   render() {
     console.log("Render RouteForm");
 
-    // <input
-    //   ref={ (input) => { this.fromInput = input; }}
-    //   type="text"
-    //   className="routeplanner-from text-field"
-    //   name="from"
-    //   placeholder="From"
-    //   defaultValue={ this.props.from }
-    //   required />
-
-    // <input
-    //   ref={ (input) => { this.toInput = input; }}
-    //   type="text"
-    //   className="routeplanner-to text-field"
-    //   name="to"
-    //   placeholder="To"
-    //   required />
+    let fromPlaceholder = this.props.from.length ? this.props.from : "From",
+        toPlaceholder = this.props.to.length ? this.props.to : "To";
 
     return (
       <form id="routeplannerForm" className="search-form routeplanner-form" onSubmit={(e) => this.formSubmit(e) }>
         <h2>Routeplanner</h2>
 
         <AutocompleteField
-          placeholder="From"
+          placeholder={ fromPlaceholder }
           inputName="from"
           inputClassnames="routeplanner-from text-field"
           inputRef={ (input) => { this.fromInput = input; } } />
@@ -47,7 +33,7 @@ class RouteForm extends Component {
         <span className="routeplanner-arrow">➡</span>
 
         <AutocompleteField
-          placeholder="To"
+          placeholder={ toPlaceholder }
           inputName="to"
           inputClassnames="routeplanner-from text-field"
           inputRef={ (input) => { this.toInput = input; } } />

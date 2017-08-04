@@ -63,16 +63,7 @@ class RouteOptions extends Component {
     const routesObj = this.state.routeplanner;
     let routeItems = '';
 
-    if (routesObj.length) {
-      console.log("Render routes");
-
-      routeItems = routesObj.map((data, i) =>
-        <RouteSummary key={i} data={data[0]} />
-      );
-
-    } else {
-      routeItems = <li>Loading route options...</li>;
-    }
+    routeItems = routesObj.length ? routeItems = routesObj.map((data, i) => <RouteSummary key={i} data={data[0]} /> ) : <li>Loading route options...</li>;
 
     return (
       <div className="routeplanner">

@@ -3,61 +3,53 @@ import React, { Component } from 'react';
 class ModeEmoji extends Component {
   render () {
 
-    var mode = this.props.mode;
+    let mode = this.props.mode,
+        emoji = '';
 
-    if (mode === 'bus') {
-      return (
-        <span role="img" aria-label="bus">🚌</span>
-      )
-    } else if (mode === 'tube') {
-      return (
-        <span role="img" aria-label="tube">🚇</span>
-      )
-    } else if (mode === 'tram') {
-      return (
-        <span role="img" aria-label="tram">🚋</span>
-      )
-    } else if (mode === 'overground') {
-      return (
-        <span role="img" aria-label="overground">🚂</span>
-      )
-    } else if (mode === 'tflrail') {
-      return (
-        <span role="img" aria-label="tflrail">🚉</span>
-      )
-    } else if (mode === 'national-rail') {
-      return (
-        <span role="img" aria-label="national-rail">🚄</span>
-      )
-    } else if (mode === 'dlr') {
-      return (
-        <span role="img" aria-label="dlr">🚈</span>
-      )
-    } else if (mode === 'cable-car') {
-      return (
-        <span role="img" aria-label="cable-car">🚠</span>
-      )
-    } else if (mode === 'river-tour') {
-      return (
-        <span role="img" aria-label="river-tour">⛵️</span>
-      )
-    } else if (mode === 'river-bus') {
-      return (
-        <span role="img" aria-label="river-bus">🚤</span>
-      )
-    } else if (mode === 'international-rail') {
-      return (
-        <span role="img" aria-label="international-rail">🚅</span>
-      )
-    } else if (mode === 'walking') {
-      return (
-        <span role="img" aria-label="walking">🚶‍♀️</span>
-      )
-    } else {
-      return (
-        <span>{ mode }</span>
-      )
+    switch (mode) {
+      case 'bus':
+        emoji = <span role="img" aria-label="bus">🚌</span>
+        break;
+      case 'tube':
+        emoji = <span role="img" aria-label="tube">🚇</span>
+        break;
+      case 'tram':
+        emoji = <span role="img" aria-label="tram">🚋</span>
+        break;
+      case 'overground':
+        emoji = <span role="img" aria-label="overground">🚂</span>
+        break;
+      case 'tflrail':
+        emoji = <span role="img" aria-label="tflrail">🚉</span>
+        break;
+      case 'national-rail':
+        emoji = <span role="img" aria-label="national-rail">🚄</span>
+        break;
+      case 'dlr':
+        emoji = <span role="img" aria-label="dlr">🚈</span>
+        break;
+      case 'cable-car':
+        emoji = <span role="img" aria-label="cable-car">🚠</span>
+        break;
+      case 'river-tour':
+        emoji = <span role="img" aria-label="river-tour">⛵️</span>
+        break;
+      case 'river-bus':
+        emoji = <span role="img" aria-label="river-bus">🚤</span>
+        break;
+      case 'international-rail':
+        emoji = <span role="img" aria-label="international-rail">🚅</span>
+        break;
+      case 'walking':
+        emoji = <span role="img" aria-label="walking">🚶‍♀️</span>
+        break;
+      default:
+        emoji = <span>{ mode }</span>
     }
+
+    return (
+      emoji
+    )
   }
 }
 

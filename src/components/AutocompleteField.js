@@ -72,7 +72,6 @@ class AutocompleteField extends Component {
       <li key={ i } onClick={ (e) => this.suggestionClick(e, stop.name, stop.name ) }>{ stop.name }</li>
     )
   }
-  // <li key={ i } onClick={ (e) => this.suggestionClick(e, stop.topMostParentId, stop.name ) }>{ stop.name }</li>
 
   suggestionClick(event, stopId, stopName) {
     this.setState({
@@ -84,26 +83,11 @@ class AutocompleteField extends Component {
 
 
   render() {
-    let textToDisplay = this.props.placeholder,
-        stopId,
-        overlayDisplay = 'none',
-        autocompleteSuggestions = [],
-        completeSuggestions = this.state.autocomplete;
-
-    if (this.state.launchOverlay) {
-      overlayDisplay = "block";
-    } else {
-      overlayDisplay = 'none';
-    }
-
-    if (this.state.autocompletedName.length && this.state.autocompletedId.length) {
-      textToDisplay = this.state.autocompletedName;
-      stopId = this.state.autocompletedId;
-    }
-
-    if ( this.state.autocomplete ) {
-      autocompleteSuggestions = completeSuggestions.map( (data, i) => this.suggestion( data, i ) );
-    }
+    let textToDisplay = this.state.autocompletedName.length ? this.state.autocompletedName : this.props.placeholder,
+        stopId = this.state.autocompletedId.length ? this.state.autocompletedId : '',
+        overlayDisplay = this.state.launchOverlay ? "block" : 'none',
+        completeSuggestions = this.state.autocomplete,
+        autocompleteSuggestions = completeSuggestions ? completeSuggestions.map( (data, i) => this.suggestion( data, i ) ) : [];
 
     return (
       <div className="autocomplete-wrapper">

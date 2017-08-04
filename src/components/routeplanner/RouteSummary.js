@@ -15,11 +15,7 @@ class RouteSummary extends Component {
   }
 
   openLegs(event) {
-    let legsStatus = true;
-
-    if (this.state.legsOpen) {
-      legsStatus = false;
-    }
+    let legsStatus = this.state.legsOpen ? false : true;
 
     this.setState({
       legsOpen: legsStatus
@@ -29,25 +25,11 @@ class RouteSummary extends Component {
   render() {
     let routeData = this.props.data,
         legsObj = routeData.legs,
-        miniLegs = '';
+        miniLegs = '',
+        routeLegsListing = this.state.legsOpen ? <RouteLegsList routeData={this.props.data} /> : '',
+        routeSummaryStatus = this.state.legsOpen ? 'route-summary-wrapper summary-open' : 'route-summary-wrapper';
 
-    if (legsObj.length) {
-      miniLegs = legsObj.map((data, i) =>
-        <ModeEmoji key={i} mode={data.mode.name} />
-      );
-    } else {
-      miniLegs = <li>No route legs</li>;
-    }
-
-    let routeLegsListing,
-        summaryStatusClass = '';
-
-    if (this.state.legsOpen) {
-      summaryStatusClass = 'summary-open';
-      routeLegsListing = <RouteLegsList routeData={this.props.data} />
-    }
-
-    let routeSummaryStatus = `route-summary-wrapper ${summaryStatusClass}`;
+    miniLegs = legsObj.length ? miniLegs = legsObj.map((data, i) => <ModeEmoji key={i} mode={data.mode.name} /> ) : <li>No route legs</li>;
 
     return (
       <li className={routeSummaryStatus}>
