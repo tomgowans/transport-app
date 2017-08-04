@@ -8,8 +8,8 @@ class RouteBadge extends Component {
     let routeOptions = this.props.routeOptions,
         routeDirections = routeOptions.directions[0],
         modeId = this.props.modeId,
-        routeName = routeOptions.lineIdentifier.name,
-        badgeClass = `inline-badge badge-${routeOptions.lineIdentifier.id}`;
+        routeName,
+        badgeClass = this.props.appendRouteName ? `inline-badge badge-${this.props.badgeClass}` : `inline-badge badge-${routeOptions.lineIdentifier.id}`;
 
     if (this.props.appendRouteName) {
 
@@ -24,7 +24,8 @@ class RouteBadge extends Component {
           routeName = routeOptions.name;
       }
 
-      badgeClass = `inline-badge badge-${this.props.badgeClass}`;
+    } else {
+      routeName = routeOptions.lineIdentifier.name;
     }
 
     return (

@@ -40,8 +40,6 @@ class RouteOptions extends Component {
 
 
       if (journeys !== undefined) {
-        console.log( "Journeys", journeys );
-
         journeys.forEach((child) => {
           listItems.push([
             child
