@@ -6,9 +6,14 @@
   background: #fff;
   border: 2px solid #ccc;
   border-radius: 5px;
+  box-sizing: border-box;
   display: inline-block;
   font-size: .9em;
+  overflow: hidden;
   padding: 5px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .button-1 {
@@ -16,5 +21,28 @@
   border-radius: 5px;
   border: 0;
   color: #fff;
-  padding: 6px 11px;
+  padding: 8.5px 15px;
+}
+
+.routeplanner-form-group {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.routeplanner-form-group .routeplanner-arrow {
+  flex: 0;
+}
+
+.routeplanner-form-group .button-1 {
+  flex: auto;
+}
+
+.routeplanner-form-group > .autocomplete-wrapper {
+  flex: 0 0 45%;
+}
+
+.routeplanner-form-group .autocomplete-wrapper > .text-field {
+  max-width: 43vw;
 }
