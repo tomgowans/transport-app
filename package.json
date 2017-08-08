@@ -2,6 +2,7 @@
   "name": "transport-app",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://tomgowans.github.io/transport-app/build/",
   "devDependencies": {
     "@storybook/react": "^3.1.3",
     "react-scripts": "1.0.10"
