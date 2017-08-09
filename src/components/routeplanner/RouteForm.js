@@ -17,8 +17,8 @@ class RouteForm extends Component {
   render() {
     console.log("Render RouteForm");
 
-    let fromPlaceholder = this.props.from.length ? this.props.from : "From",
-        toPlaceholder = this.props.to.length ? this.props.to : "To";
+    let fromPlaceholder = this.props.from !== undefined ? this.props.from : "From",
+        toPlaceholder = this.props.to !== undefined ? this.props.to : "To";
 
     return (
       <form id="routeplannerForm" className="search-form routeplanner-form" onSubmit={(e) => this.formSubmit(e) }>
