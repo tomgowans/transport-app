@@ -2,3 +2,4 @@
 node_modules/
 
 src/config/auth.js
+.DS_Store
