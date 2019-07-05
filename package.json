@@ -4,19 +4,19 @@
   "private": true,
   "homepage": "http://transport-app.s3-website-us-east-1.amazonaws.com/",
   "devDependencies": {
-    "@storybook/react": "latest",
-    "react-scripts": "latest"
+    "@storybook/react": "^5.1.9",
+    "react-scripts": "^3.0.1"
   },
   "dependencies": {
-    "enzyme": "latest",
-    "jest-enzyme": "latest",
-    "moment": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-google-maps": "latest",
-    "react-router": "latest",
-    "react-router-dom": "latest",
-    "react-test-renderer": "latest"
+    "enzyme": "^3.10.0",
+    "jest-enzyme": "^7.0.2",
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-google-maps": "^9.4.5",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-test-renderer": "^16.8.6"
   },
   "scripts": {
     "start": "react-scripts start",
