@@ -4,8 +4,8 @@
   "private": true,
   "homepage": "http://transport-app.s3-website-us-east-1.amazonaws.com/",
   "devDependencies": {
-    "@storybook/react": "^5.3.18",
-    "react-scripts": "^3.4.1"
+    "@storybook/react": "5.3.21",
+    "react-scripts": "3.4.3"
   },
   "dependencies": {
     "enzyme": "^3.11.0",
