@@ -5,7 +5,7 @@
   "homepage": "http://transport-app.s3-website-us-east-1.amazonaws.com/",
   "devDependencies": {
     "@storybook/react": "6.1.15",
-    "react-scripts": "3.4.3"
+    "react-scripts": "4.0.2"
   },
   "dependencies": {
     "enzyme": "^3.11.0",
