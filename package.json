@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "http://transport-app.s3-website-us-east-1.amazonaws.com/",
   "devDependencies": {
-    "@storybook/react": "6.3.0",
+    "@storybook/react": "6.4.13",
     "react-scripts": "4.0.3"
   },
   "dependencies": {
